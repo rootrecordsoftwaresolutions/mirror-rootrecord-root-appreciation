@@ -40,7 +40,8 @@ motd:
   delay-ticks: 40
 
 messages:
-  prefix: "&6[Appreciation] &r"
+  # Optional chat prefix (empty = none).
+  prefix: ""
   players-only: "&cPlayers only."
   disabled: "&eAppreciation Tokens are disabled."
   no-permission: "&cNo permission."
