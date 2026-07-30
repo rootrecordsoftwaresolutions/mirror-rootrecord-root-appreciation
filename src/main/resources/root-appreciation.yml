@@ -1,0 +1,70 @@
+# Root-Appreciation — plugins/RootMC/root-appreciation.yml
+
+enabled: true
+
+token:
+  # Base item (sunflower). Display name / lore / PDC mark it as an Appreciation Token.
+  material: SUNFLOWER
+  display-name: "&6Appreciation Token"
+  lore:
+    - "&7A token of appreciation from RootMC."
+    - "&8Redeemable for future rewards."
+    - "&8Keep these safe — they are tracked."
+
+bonus:
+  enabled: true
+  # Hours after last claim before streak is considered missed (resets to day 1).
+  miss-after-hours: 48
+  # Minimum hours between claims (anti-spam / once per day).
+  cooldown-hours: 20
+  # Day index 1..N → tokens + gold. Days beyond the list use the last row.
+  days:
+    - tokens: 1
+      gold: 5.0
+    - tokens: 2
+      gold: 10.0
+    - tokens: 3
+      gold: 15.0
+    - tokens: 4
+      gold: 20.0
+    - tokens: 5
+      gold: 25.0
+
+# When true, /thanks redeem removes tokens and logs REDEEM (no reward catalog yet).
+redeem:
+  enabled: false
+
+motd:
+  # On join, remind if /bonus not claimed in the current cooldown window.
+  remind-if-bonus-available: true
+  delay-ticks: 40
+
+messages:
+  prefix: "&6[Appreciation] &r"
+  players-only: "&cPlayers only."
+  disabled: "&eAppreciation Tokens are disabled."
+  no-permission: "&cNo permission."
+  thanks-header: "&6—— Appreciation Tokens ——"
+  thanks-global-issued: "&7Total Tokens issued (global): &f{count}"
+  thanks-global-redeemed: "&7Total Tokens redeemed (global): &f{count}"
+  thanks-you-issued: "&7Total Tokens issued (you): &f{count}"
+  thanks-you-redeemed: "&7Total Tokens redeemed (you): &f{count}"
+  thanks-supply: "&7Total Supply (global): &f{count}"
+  thanks-streak: "&7Your daily streak: &f{streak}&7 · next /bonus: &f{next}"
+  thanks-usage: "&e/thanks &7· &e/thanks give <player> <amount> &7· &e/thanks redeem <amount> &7· &e/bonus"
+  bonus-disabled: "&eDaily /bonus is disabled."
+  bonus-too-soon: "&eYou already claimed recently. Try again in &f{hours}h&e."
+  bonus-success: "&aDay &f{day}&a streak! Received &f{tokens} Appreciation Token(s)&a and &f{gold} G&a."
+  bonus-db: "&cCould not save bonus — try again later."
+  give-usage: "&eUsage: &f/thanks give <player> <amount>"
+  give-success: "&aGave &f{amount} Appreciation Token(s)&a to &f{player}&a."
+  give-received: "&aYou received &f{amount} Appreciation Token(s)&a."
+  redeem-usage: "&eUsage: &f/thanks redeem <amount>"
+  redeem-none: "&eRedeem targets are not live yet — Appreciation Tokens are still collected for future rewards."
+  redeem-need: "&eYou need &f{amount} Appreciation Token(s)&e in your inventory."
+  redeem-success: "&aRedeemed &f{amount} Appreciation Token(s)&a. (Logged — rewards coming soon.)"
+  motd-bonus: "&6[Appreciation] &7Daily streak available — claim with &f/bonus&7!"
+  reload-done: "&aRoot-Appreciation reloaded."
+  inventory-full: "&eInventory full — Appreciation Tokens dropped at your feet."
+  invalid-amount: "&eEnter a whole number amount of at least 1."
+  player-not-found: "&ePlayer not found: &f{player}"
