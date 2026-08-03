@@ -64,7 +64,7 @@ messages:
   redeem-none: "&eRedeem targets are not live yet — Appreciation Tokens are still collected for future rewards."
   redeem-need: "&eYou need &f{amount} Appreciation Token(s)&e in your inventory."
   redeem-success: "&aRedeemed &f{amount} Appreciation Token(s)&a. (Logged — rewards coming soon.)"
-  motd-bonus: "&6[Appreciation] &7Daily streak available — claim with &f/bonus&7!"
+  motd-bonus: "&7Daily streak available — claim with &f/bonus&7!"
   reload-done: "&aRoot-Appreciation reloaded."
   inventory-full: "&eInventory full — Appreciation Tokens dropped at your feet."
   invalid-amount: "&eEnter a whole number amount of at least 1."
